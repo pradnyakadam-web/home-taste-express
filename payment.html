@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME TRUCK EXPRESS - Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment</h1>
+        <p>Total: ₹<span id="payment-total">0</span></p>
+
+        <button onclick="showPaymentOptions()">Pay Online</button>
+        <button onclick="payCash()">Pay with Cash</button>
+        <button onclick="goToCart()">Back to Cart</button>
+
+        <!-- Hidden Online Payment Options -->
+        <div id="online-options" style="display: none; margin-top: 20px;">
+            <h2>Select Payment Method</h2>
+            <button onclick="processPayment('UPI')">UPI</button>
+            <button onclick="processPayment('Credit Card')">Credit Card</button>
+            <button onclick="processPayment('Debit Card')">Debit Card</button>
+            <button onclick="processPayment('Other')">Other</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

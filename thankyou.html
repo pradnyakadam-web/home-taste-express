@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - HOME TASTE EXPRESS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .thankyou-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #ff4500;
+            font-size: 26px;
+        }
+        p {
+            color: #444;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .btn {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 15px 10px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou-box">
+        <h1>Thank You for Coming to HOME TASTE EXPRESS! 😋</h1>
+        <p>😊 Your order has been placed. Enjoy your meal! 🍟</p>
+        <div>
+            <button class="btn" onclick="orderAgain()">Order Again</button>
+            <button class="btn" onclick="backToLogin()">Back to Login</button>
+        </div>
+    </div>
+
+   <script>
+    function orderAgain() {
+        clearCartAfterOrder();
+        window.location.href = "menu.html"; 
+    }
+
+    function backToLogin() {
+        clearCartAfterOrder();
+        window.location.href = "index.html"; 
+    }
+
+    function clearCartAfterOrder() {
+        localStorage.removeItem("cart");
+        localStorage.removeItem("cartTotal");
+    }
+</script>
+
+</body>
+</html>
